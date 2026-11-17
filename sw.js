@@ -3,7 +3,7 @@
 // Google sign-in and Drive calls go to other origins and are never touched by this worker.
 // Network first, so a newer ERP version is picked up as soon as the launcher serves it.
 const CACHE = 'chirag-erp-local-1.3.0';
-const SHELL = ['./', './index.html', './head.js', './local.js', './sync.js', './move.js', './boot.js', './erp/app.css', './erp/core.js', './erp/exports.js', './erp/store.js', './erp/app.js', './erp/sync-ui.js', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
+const SHELL = ['./', './index.html', './head.js', './local.js', './sync.js', './move.js', './boot.js', './app.css', './core.js', './exports.js', './store.js', './app.js', './sync-ui.js', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', (e) => {
