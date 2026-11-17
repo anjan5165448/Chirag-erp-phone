@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.googleapis.com https://oauth2.googleapis.com http://localhost:8765; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a08">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chirag ERP">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>CHIRAG ENTERPRISES — ERP</title>
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="erp/app.css">
+<script src="head.js"></script>
+<style>
+  body{padding-top:env(safe-area-inset-top)}
+  /* iPhone: 16px text in the search box so Safari does not zoom in when it is tapped */
+  @media(max-width:900px){.gs input{font-size:16px}}
+  #bootmsg{padding:40px 20px;font:16px system-ui,-apple-system,"Segoe UI",sans-serif;color:#d9c08a;background:#0b0a08;min-height:100vh;line-height:1.6}
+  @media print{#rkShow{color:#000!important;background:#fff!important}}
+</style>
+</head>
+<body>
+<div id="erp-root"><div id="bootmsg">Starting CHIRAG ENTERPRISES ERP…<br><span style="opacity:.7">ERP शुरू हो रहा है…</span></div></div>
+<noscript><div style="padding:20px;color:#fff;background:#7a1d1d;font:16px system-ui">JavaScript is turned off in this browser. Please turn it on to use the ERP. / इस ब्राउज़र में JavaScript बंद है, कृपया चालू करें।</div></noscript>
+<script src="local.js"></script>
+<script src="sync.js"></script>
+<script src="move.js"></script>
+<script src="erp/core.js"></script>
+<script src="erp/exports.js"></script>
+<script src="erp/store.js"></script>
+<script src="erp/app.js"></script>
+<script src="erp/sync-ui.js"></script>
+<script src="boot.js"></script>
+</body>
+</html>
